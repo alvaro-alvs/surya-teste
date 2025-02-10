@@ -1,0 +1,91 @@
+---
+import Image from "../assets/image.png";
+import Icon1 from "../assets/icons/1.svg";
+import Icon2 from "../assets/icons/2.svg";
+import Icon3 from "../assets/icons/3.svg";
+import Icon4 from "../assets/icons/4.svg";
+
+//* Icons
+const items = [
+    {
+        icon: Icon1.src,
+        content:
+            "A CRM built just for nonprofits that helps you grow & retain a stronger community of donors.",
+    },
+    {
+        icon: Icon2.src,
+        content:
+            "Volunteer management tools that makes it easy to grow your volunteer base and save time.",
+    },
+    {
+        icon: Icon3.src,
+        content:
+            "Increase donations every year with a modern set of relationship-focused fundraising tools.",
+    },
+    {
+        icon: Icon4.src,
+        content:
+            "A CRM built just for nonprofits that helps you grow & retain a stronger community of donors.",
+    },
+];
+---
+
+<article class="sm:w-3/5 flex flex-col justify-center items-center">
+    <figure class="xl:flex items-center p-10 sm:space-x-10">
+        <div class="w-full xl:w-sm max-h-[400px] overflow-hidden object-cover">
+            <img class="object-cover w-full" src={Image.src} alt="" />
+        </div>
+
+        <div class="max-w-md flex flex-col space-y-5">
+            <div class="space-y-5">
+                <h2 class="text-[#2B2B3D] text-4xl font-bold">
+                    What Kind of Courses Offers Learning Platform
+                </h2>
+                <p class="text-xs text-slate-400">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus quas porro itaque eum dolorum assumenda aspernatur
+                    voluptas distinctio mollitia aperiam! Fugit voluptates quae
+                    quos sapiente doloribus numquam unde. Sunt, facere?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-5 text-slate-600 font-semibold">
+                <span class="text-center p-4 bg-slate-100">
+                    10k+ Lessons
+                </span>
+                <span class="text-center p-4 bg-slate-100">
+                    Qualited Teachers
+                </span>
+                <span class="text-center p-4 bg-slate-100">
+                    1500+ Courses
+                </span>
+                <span class="text-center p-4 bg-slate-100">
+                    200+ Free Videos
+                </span>
+            </div>
+        </div>
+    </figure>
+
+    <figure class="mt-24 space-y-10">
+        <h1 class="text-center text-4xl text-black font-bold">
+            Boost Your Fundraising & Growth
+        </h1>
+
+        <div class="grid gap-10 xl:grid-cols-4 md:grid-cols-2 grid-cols-1 p-5">
+            {
+                items.map((item) => (
+                    <div class="flex flex-col items-center space-y-5 bg-slate-100 rounded p-3">
+                        <img class="w-10" src={item.icon} alt="" />
+                        <p class="text-xs text-slate-900 text-center">
+                            {item.content}
+                        </p>
+
+                        <a class="text-lime-600 underline text-sm" href="#">
+                            Retain More Donors
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </figure>
+</article>

@@ -1,0 +1,52 @@
+---
+import Campeao from "../assets/campeao.png";
+---
+
+<header
+    class="relative w-full flex justify-center bg-gradient-to-br from-blue-400 to-violet-300 h-[60vh]"
+>
+    <img
+        class="absolute bottom-0 right-0 h-[90%] z-0"
+        src={Campeao.src}
+        alt=""
+    />
+
+    <div class="w-full sm:w-3/5 max-h-full">
+        <!-- Navbar -->
+        <nav class="flex items-center p-5 h-[5rem]">
+            <p class="font-bold">LOGO DO CLIENTE</p>
+        </nav>
+
+        <article
+            class="h-full sm:flex text-white p-7 backdrop-blur-sm sm:w-max"
+        >
+            <!-- Chamada -->
+            <div
+                class="text-center md:text-left sm:max-w-lg space-y-7 sm:mt-14 z-10"
+            >
+                <h1 class="font-bold text-5xl">
+                    Build and scale your next business idea faster
+                </h1>
+
+                <p class="text-sm">
+                    Blinder making it simple for you to build and grow your SaaS
+                    applications, or any business idea
+                </p>
+
+                <span class="flex justify-center md:justify-start space-x-5">
+                    <button
+                        class="rounded-lg text-md bg-slate-900 text-white p-5 py-2"
+                    >
+                        Start building
+                    </button>
+
+                    <button
+                        class="rounded-lg border border-slate-500 text-slate-600 p-5 py-2"
+                    >
+                        Learn more
+                    </button>
+                </span>
+            </div>
+        </article>
+    </div>
+</header>
